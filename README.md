@@ -85,14 +85,6 @@ Here are the main key variables to configure:
   prefix = "your-prefix"
   ```
 
-- **Azure wide Variables:**
-  ```hcl
-  azure-location = "westus"
-  tag_owner = "your-email"
-  tag_source_host = "your-host"
-  docker-pub-key = "your-machines-ssh-public-key"
-  ```
-
 - **XC wide Variables:**
   ```hcl
   xc_tenant = "your-tenant"
