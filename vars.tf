@@ -34,6 +34,13 @@ variable "proxmox_api_token_secret" {
 }
 
 
+# ce node user
+variable "ce-node-user" {
+  description = "ce user"
+  type = string
+}
+
+
 ####################################
 # XC lb related vars
 
