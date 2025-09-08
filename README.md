@@ -40,7 +40,6 @@ Doc for API Certificate generation: https://docs.cloud.f5.com/docs/how-to/user-m
 ```
 project-directory/
 ├── ce-data.tpl
-├── docker-data.tpl
 ├── LICENSE
 ├── main.tf
 ├── providers.tf
