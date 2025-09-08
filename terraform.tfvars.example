@@ -2,6 +2,10 @@ prefix = "your-prefix"
 
 ce-node-user = "volterra-admin"
 
+proxmox_api_url = "https://<host-ip>:8006/api2/json"
+proxmox_api_token_id = "<token-id>"
+proxmox_api_token_secret = "<secret>"
+
 xc_tenant = "your-tenant"
 xc_namespace = "your-namespace"
 xc_origin_ip1 = "10.0.2.5"
