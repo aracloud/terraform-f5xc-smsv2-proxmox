@@ -1,10 +1,16 @@
 prefix = "your-prefix"
+ssh_public_key     = "ssh-ed25519 ...."
 
 ce-node-user = "volterra-admin"
 
 proxmox_api_url = "https://<host-ip>:8006/api2/json"
 proxmox_api_token_id = "<token-id>"
 proxmox_api_token_secret = "<secret>"
+proxmox_target_nodes     = [ "prox1", "prox2", "prox3"]
+iso_storage_pool         = "cephfs"                # or local
+proxmox_storage_pool     = "cephpool"              # or local-lvm
+proxmox_clone            = "f5xc-ce-template"      # needs to be created. See README.md
+proxmox_pool             = ""
 
 xc_tenant = "your-tenant"
 xc_namespace = "your-namespace"
