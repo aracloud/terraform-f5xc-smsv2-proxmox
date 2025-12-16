@@ -19,8 +19,7 @@ resource "random_string" "password" {
 resource "volterra_securemesh_site_v2" "xc-mcn-smsv2-appstack" {
   name      = local.smsv2-site-name
   namespace = "system"
-
-  block_all_services      = true
+  block_all_services      = false
   logs_streaming_disabled = true
   enable_ha               = false
 
@@ -32,14 +31,9 @@ resource "volterra_securemesh_site_v2" "xc-mcn-smsv2-appstack" {
     geo_proximity = true
   }
 
-  azure {
-    not_managed {}
-  }
-
-  lifecycle {
-    ignore_changes = [
-      labels
-    ]
+  kvm {
+    not_managed {
+    }
   }
 }
 
