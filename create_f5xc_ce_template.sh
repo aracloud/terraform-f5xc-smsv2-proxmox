@@ -13,7 +13,7 @@
 qcow2=/root/f5xc-ce-9.2025.17-20250422074005.qcow2
 id=9000
 # storage=cephpool
-storage=local-crucial-2tb-ssd
+storage=swdata
 
 echo "resizing image to 100G ..."
 qemu-img resize $qcow2 100G

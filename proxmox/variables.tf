@@ -5,7 +5,7 @@ variable "iso_storage_pool" {
 }
 variable "pm_storage_pool" {
   type    = string
-  default = "local-lvm"
+  default = "swdata"
 }
 variable "ssh_public_key" {}
 variable "pm_clone" {}
