@@ -2,9 +2,9 @@
 //Definition of the Origin, 1-origin.tf
 //Start of the TF file
 resource "volterra_origin_pool" "xc_origin_pool" {
-  name                   = local.smsv2-site-name
+  name                   = local.f5xc_sms_name
   //Name of the namespace where the origin pool must be deployed
-  namespace              = var.xc_namespace
+  namespace              = var.f5xc_namespace
  
    origin_servers {
     private_ip {
@@ -13,7 +13,7 @@ resource "volterra_origin_pool" "xc_origin_pool" {
         site {
           tenant = var.xc_tenant
           namespace = "system"
-          name = local.smsv2-site-name
+          name = local.f5xc_sms_name
           //kind = "site"
         }
       }
@@ -22,8 +22,8 @@ resource "volterra_origin_pool" "xc_origin_pool" {
     labels = {}
    }
 
-  no_tls = var.xc_pub_app_no_tls
-  port = var.xc_pub_app_port
+  no_tls = var.f5xc_pub_app_no_tls
+  port = var.f5xc_pub_app_port
 
   endpoint_selection     = "LOCALPREFERED"
   loadbalancer_algorithm = "LB_OVERRIDE"
@@ -32,7 +32,7 @@ resource "volterra_origin_pool" "xc_origin_pool" {
 //==========================================================================
 //Definition of the WAAP Policy
 resource "volterra_app_firewall" "waap-tf" {
-  name      = local.smsv2-site-name
+  name      = local.f5xc_sms_name
   namespace = var.xc_namespace
 
   // One of the arguments from this list "allow_all_response_codes allowed_response_codes" must be set
@@ -55,9 +55,9 @@ resource "volterra_app_firewall" "waap-tf" {
 resource "volterra_http_loadbalancer" "lb-https-tf" {
   depends_on = [volterra_origin_pool.xc_origin_pool]
   //Mandatory "Metadata"
-  name      = local.smsv2-site-name
+  name      = local.f5xc_sms_name
   //Name of the namespace where the origin pool must be deployed
-  namespace = var.xc_namespace
+  namespace = var.f5xc_namespace
   //End of mandatory "Metadata" 
   
   //Mandatory "Basic configuration" with Auto-Cert 
@@ -74,8 +74,8 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   }
   default_route_pools {
       pool {
-        name = local.smsv2-site-name
-        namespace = var.xc_namespace
+        name = local.f5xc_sms_name
+        namespace = var.f5xc_namespace
       }
       weight = 1
   }
@@ -90,8 +90,8 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   
   //WAAP Policy reference, created earlier in this plan - refer to the same name
   app_firewall {
-    name = local.smsv2-site-name
-    namespace = var.xc_namespace
+    name = local.f5xc_sms_name
+    namespace = var.f5xc_namespace
   }
   
   user_id_client_ip = true
