@@ -32,15 +32,28 @@ Doc for API Certificate generation: https://docs.cloud.f5.com/docs/how-to/user-m
 
 ```
 project-directory/
-├── ce-data.tpl
+├── create_f5xc_ce_template.sh
 ├── LICENSE
-├── main.tf
+├── output.tf
 ├── providers.tf
+├── proxmox
+│   ├── master_ci.tf
+│   ├── master_vm.tf
+│   ├── output.tf
+│   ├── securemesh_v2_site.tf
+│   ├── templates
+│   │   └── user-data.tpl
+│   ├── variables.tf
+│   └── versions.tf
 ├── README.md
+├── securemesh_v2_site.tf
+├── terraform.tfstate
+├── terraform.tfstate.backup
+├── terraform.tfvars
 ├── terraform.tfvars.example
-└── vars.tfxc-cloud.drawio.png
-└── xc-cloud.drawio.png
-└── xc-lb.tf
+├── variables.tf
+├── versions.tf
+└── xc-lb.tf.tmp
 ```
 
 ---
