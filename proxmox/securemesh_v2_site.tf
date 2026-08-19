@@ -23,7 +23,7 @@ resource "volterra_securemesh_site_v2" "site" {
       static_routes {
         static_routes {
           ip_prefixes = ["10.1.0.0/16", "10.2.0.0/16"]
-          ip_address  = "192.168.2.130"
+          ip_address  = "192.168.2.2"
           attrs       = ["ROUTE_ATTR_INSTALL_FORWARDING"]
         }
       }
