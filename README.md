@@ -1,4 +1,4 @@
-# F5 SaaS (RE-CE) demo with terraform
+# F5 SaaS (RE-CE) demo with terraform on Proxmox (6.2.4)
 
 ## Overview
 This Terraform project deploys following items:
