@@ -12,7 +12,8 @@ resource "proxmox_vm_qemu" "master-vm" {
     type = "socket"
   }
   agent     = 1
-  onboot    = true
+  start_at_node_boot = true
+  #onboot    = true
   skip_ipv6 = true # required until https://github.com/Telmate/terraform-provider-proxmox/issues/1015 is fixed
 
   cpu {

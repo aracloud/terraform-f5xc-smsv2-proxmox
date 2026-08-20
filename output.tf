@@ -1,6 +1,9 @@
 output "proxmox" {
   value = {
-    securemesh = module.securemesh-v2-site
+    securemesh = {
+      id = odule.securemesh-v2-site.id
+      name = odule.securemesh-v2-site.name
+    }
   }
   sensitive = true
 }
