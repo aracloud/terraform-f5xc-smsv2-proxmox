@@ -11,6 +11,15 @@ variable "f5xc_api_url" {}
 variable "f5xc_api_token" {}
 variable "f5xc_tenant" {}
 
+variable "f5xc_latitude" {
+  type    = number
+  default = 8
+}
+variable "f5xc_longitude" {
+  type    = number
+  default = 8
+}
+
 # Proxmox
 
 variable "pm_api_url" {}

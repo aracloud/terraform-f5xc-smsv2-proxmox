@@ -13,11 +13,11 @@ variable "pm_pool" {
   type    = string
   default = ""
 }
-variable "f5xc_latitude" {
+variable "latitude" {
   type    = number
   default = 8
 }
-variable "f5xc_longitude" {
+variable "longitude" {
   type    = number
   default = 8
 }
