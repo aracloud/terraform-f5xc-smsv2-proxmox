@@ -105,6 +105,9 @@ Here are the main key variables to configure:
   f5xc_tenant         = "<tenant id>"
   f5xc_api_p12_file   = "<path to tenant.console.ves.volterra.io.api-creds.p12 file>
 
+  f5xc_latitude       = "51.99102"
+  f5xc_longitude       = "-0.66744"
+
   ```
 
 ### 4. Initialize Terraform
