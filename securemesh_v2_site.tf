@@ -9,8 +9,8 @@ module "securemesh-v2-site" {
   master_cpus        = 4
   secure_mesh_memory = 32768
 
-  latitude              = 51.99102
-  longitude             = -0.66744
+  latitude              = var.f5xc_latitude
+  longitude             = var.f5xc_longitude
   volterra_certified_hw = "kvm-voltmesh"
   ssh_public_key        = var.ssh_public_key
   pm_target_node        = var.pm_target_nodes[count.index % length(var.pm_target_nodes)]
