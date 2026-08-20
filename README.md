@@ -47,9 +47,6 @@ project-directory/
 │   └── versions.tf
 ├── README.md
 ├── securemesh_v2_site.tf
-├── terraform.tfstate
-├── terraform.tfstate.backup
-├── terraform.tfvars
 ├── terraform.tfvars.example
 ├── variables.tf
 ├── versions.tf
